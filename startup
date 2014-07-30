@@ -1,0 +1,26 @@
+!#/bin/sh
+
+sleep 2
+#required to give icewm taskbar some time to startup before applets are added
+
+gnome-sound-applet &
+#Volume Control applet
+
+#mate-bluetooth-applet &
+#Bluetooth applet (bluetooth-applet is not available on Ubuntu 13.1)
+
+#mate-power-manager &
+#Power Manager applet (gnome-power-manager is not available on Ubuntu 13.1)
+
+/opt/extras.ubuntu.com/indicator-brightness/indicator-brightness &
+#Brightness Control applet (in the case keyboard brightness commands fail)
+
+nm-applet &
+#Network Manager applet
+
+gnome-settings-daemon &
+#makes all GTK applications (eg Firefox) use the Gnome3/Unity graphics (dark grey)
+
+xscreensaver -nosplash &
+#startup screensaver (enables desktop locking)
+
